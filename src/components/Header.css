@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.header img {
+    width: 35%;
+    margin: 0 1.5%;
+    padding: 0;
+    transform: rotate(15deg);
+    overflow: hidden;
+}

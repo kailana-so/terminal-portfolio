@@ -1,0 +1,17 @@
+footer {
+    margin: 5% 0 0 0;
+    padding: 0;
+    position:absolute;
+    left:0;
+    bottom:1%;
+    right:0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.work-icons {
+    width: 35%;
+    height: 35%;
+}
