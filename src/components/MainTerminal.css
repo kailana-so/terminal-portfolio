@@ -3,6 +3,7 @@
 .terminal-path{
     font-family: 'VT323', monospace;
     font-size: larger;
+    margin-left: -2%;
 }
 .main-terminal {
     text-align: left;
@@ -80,4 +81,8 @@
 
 .terminal-text img {
     width: 100%;
+}
+
+.hidden {
+    display: none;
 }

@@ -10,7 +10,6 @@ export default function Header() {
     return (
         <header className="header">
                 <img src={logo} alt="Logo"/>
-                {/* <Hamburger toggled={isOpen} toggle={setOpen} /> */}
         </header>
     )
 }

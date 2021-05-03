@@ -7,6 +7,8 @@ import { PageContext } from './PageContext'
  
 export default function MainTerminal() {
 
+    const currentDate = new Date() 
+
     const [ value, setValue ] = useState([])
     console.log(value)
     
@@ -17,26 +19,24 @@ export default function MainTerminal() {
         setValue(value => [...value, userInput])  
     }
     
-    const currentDate = new Date()
-
     const menu = (
         <section>
             <p className="terminal-path">~/menu</p>
             <Typist> 
                 <Typist.Delay ms={500} />
                 <p>
-                    Type 'open about' to read my bio  
+                    &#62; Type 'open about' to read my bio  
                 </p>
                 <p>
-                    Type 'open projects' to see some projects
+                    &#62; Type 'open projects' to see some projects
                 </p>
                 <p>
-                    Type 'open contact' to get in touch
+                    &#62; Type 'open lang' to see my languages on github
                 </p>
             </Typist>
         </section>
     )
-
+    
     return (
         <Draggable>
             <section className="main-terminal">
@@ -49,7 +49,7 @@ export default function MainTerminal() {
                     <section className="terminal-text">
                         <p className="terminal-path">{moment(currentDate).format("dddd, MMMM Do YYYY, h:mm:ss a")}</p>
 
-                        <div className="container">
+                        <section className="container">
                             <Typist>
                                 <p> Hi there.</p>
                                 <Typist.Delay ms={900} />
@@ -67,9 +67,9 @@ export default function MainTerminal() {
 
                             <form>
                                 <b className="user"> &#62; &#62; </b> 
-                                <input autofocus="" className="user-input" type="text" onChange={handleInput} cols="35" rows="5"/> 
+                                <input autofocus="" className="user-input" type="text" onChange={handleInput} cols="35" rows="5" placeholder="..." /> 
                             </form>
-                        </div>
+                        </section>
                     </section>
                 </div>
             </section>

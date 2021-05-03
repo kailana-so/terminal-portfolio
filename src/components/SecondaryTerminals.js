@@ -1,21 +1,26 @@
 import Typist from 'react-typist'
 import './MainTerminal.css'
 import Draggable from 'react-draggable'
+import { useContext } from 'react'
+import { PageContext } from './PageContext'
  
 export default function SecondaryTerminals(props) {
 
     console.log(props)
-    const title = props.data[0].title
-    const description = props.data[0].description
-    const image = props.data[0].img_url
-    console.log(image)
+    const title = props.data.title
+    const description = props.data.description
+    const image = props.data.img_url
+    const link = props.data.link
+
+    const { handleClose } = useContext(PageContext)
+
 
     return (
         <Draggable>
             <section className="secondary-terminals">
                 <div className="terminal-window">
                     <div className="terminal-bar">
-                        <div className="terminal-btn red"></div>
+                        <div className="terminal-btn red" onClick={() => handleClose(props)}></div>
                         <div className="terminal-btn yellow"></div>
                         <div className="terminal-btn green"></div>
                     </div>
@@ -29,6 +34,9 @@ export default function SecondaryTerminals(props) {
                             <div className="container">
                                 {description}
                             </div>
+                            <p>
+                                <a href={link}> <b className="blue">view online</b> </a>
+                            </p>
                         </Typist>
                     </section>
                 </div>

@@ -16,8 +16,7 @@ export default function MainPage(){
             {/* grab the user input form the main termianl component and create a new array? then map through that array */}
             <MainTerminal />
 
-            {/* {data.map(object => console.log(object))} */}
-            {data.map(object => <SecondaryTerminals key={data.id} data={data}/>)}
+            {data.map(terminalData => terminalData.showWindow === true ? <SecondaryTerminals key={terminalData.id} id={terminalData.id} data={terminalData} visible={terminalData.showWindow}/> : null)}
             
         </section>
     )
