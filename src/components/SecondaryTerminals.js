@@ -6,7 +6,6 @@ import { PageContext } from './PageContext'
  
 export default function SecondaryTerminals(props) {
 
-    console.log(props)
     const title = props.data.title
     const description = props.data.description
     const image = props.data.img_url
@@ -26,18 +25,18 @@ export default function SecondaryTerminals(props) {
                     </div>
                     <section className="terminal-text">
                         <img src={image} alt={title}/>
-                        <Typist>
+                        {/* <Typist> */}
                             <h1> 
                                 {title}
                             </h1>
-                            <Typist.Delay ms={900} />
+                            {/* <Typist.Delay ms={900} /> */}
                             <div className="container">
                                 {description}
                             </div>
                             <p>
                                 <a href={link}> <b className="blue">view online</b> </a>
                             </p>
-                        </Typist>
+                        {/* </Typist> */}
                     </section>
                 </div>
             </section>

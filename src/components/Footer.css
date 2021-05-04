@@ -1,13 +1,14 @@
 footer {
     margin: 5% 0 0 0;
     padding: 0;
-    position:absolute;
+    position: absolute;
     left:0;
-    bottom:1%;
+    bottom:0;
     right:0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    z-index: -999;
 
 }
 

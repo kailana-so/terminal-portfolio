@@ -9,14 +9,18 @@ export default function MainTerminal() {
 
     const currentDate = new Date() 
 
+    const { handleOpen } = useContext(PageContext)
+    // console.log(handleOpen)
+
     const [ value, setValue ] = useState([])
-    console.log(value)
+    // console.log(value)
     
 
-    const handleInput = e => {
+    const handleInput = (e) => {
         e.preventDefault()
         let userInput =  e.target.value.toLowerCase()
         setValue(value => [...value, userInput])  
+        handleOpen(userInput)
     }
     
     const menu = (
@@ -32,6 +36,9 @@ export default function MainTerminal() {
                 </p>
                 <p>
                     &#62; Type 'open lang' to see my languages on github
+                </p>
+                <p>
+                    <sub> [drag windows]</sub>
                 </p>
             </Typist>
         </section>
@@ -55,11 +62,9 @@ export default function MainTerminal() {
                                 <Typist.Delay ms={900} />
                                     <p> I'm Kailana.</p>
                                     <Typist.Delay ms={900} />
-                                    <p> Before we move on, let's get some things straight.</p>
-                                    <Typist.Delay ms={900} />
                                     <p> This is a website. <Typist.Backspace count={12} delay={200} /> my website.</p>
                                     <Typist.Delay ms={900} />
-                                    <p> You are the user.</p>
+                                    {/* <p> You are the user.</p> */}
                                     <p> For commands type 'HELP' </p> 
                             </Typist>
 

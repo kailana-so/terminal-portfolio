@@ -7,7 +7,7 @@ import { useContext } from 'react'
 export default function MainPage(){
 
     const { data } = useContext(PageContext)
-    console.log(data)
+    // console.log(data)
 
     return (
         <section className="main-page">
@@ -16,7 +16,11 @@ export default function MainPage(){
             {/* grab the user input form the main termianl component and create a new array? then map through that array */}
             <MainTerminal />
 
-            {data.map(terminalData => terminalData.showWindow === true ? <SecondaryTerminals key={terminalData.id} id={terminalData.id} data={terminalData} visible={terminalData.showWindow}/> : null)}
+            <section className="terminals-section">
+
+                {data.map(terminalData => terminalData.showWindow === true ? <SecondaryTerminals key={terminalData.id} id={terminalData.id} data={terminalData} visible={terminalData.showWindow}/> : null)}
+
+            </section>
             
         </section>
     )

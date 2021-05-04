@@ -9,8 +9,6 @@ function App() {
       <Header />
 
         <MainPage />
-        <span> ----- </span>
-        {/* <Projects /> */}
 
       <Footer />
     </div>
