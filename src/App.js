@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header.js'
-import Footer from './components/Footer.js'
+// import Footer from './components/Footer.js'
 import MainPage from './components/MainPage.js'
 
 function App() {
@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       <Header />
 
-        <MainPage />
+      <MainPage />
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

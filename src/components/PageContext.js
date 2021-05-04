@@ -18,7 +18,7 @@ export function PageProvider(props) {
         {   
             id: 0,
             title: 'CSS ATM',
-            description: 'A GA css challenge',
+            description: 'A GA css challenge.',
             img_url: bank,
             link: 'https://codepen.io/Kailana-so/pen/GRrgKbx',
             showWindow: false
@@ -34,7 +34,7 @@ export function PageProvider(props) {
         {   
             id: 2,
             title: 'Tic Tac Toe',
-            description: 'A GA challenge: Tic Tac Toe (reimagined as an 80s classic)',
+            description: 'A GA coding challenge: Tic Tac Toe (reimagined as an 80s classic)',
             img_url: tictac,
             link: 'https://github.com/kailana-so/TicTacToe',
             showWindow: false
@@ -42,7 +42,7 @@ export function PageProvider(props) {
         {   
             id: 3,
             title: 'Native plant db',
-            description: 'A ruby web app to submit sighting of native east coast plants.',
+            description: 'A web app build with Ruby and Sinatra, designed to mark sightings of native east coast plants varieties.',
             img_url: flowers,
             link: 'https://github.com/kailana-so/native-plants-app',
             showWindow: false
@@ -50,7 +50,9 @@ export function PageProvider(props) {
         {   
             id: 4,
             title: 'Interactive Annual Report',
-            description: 'Interactive Annual Report for Wellways 2020.',
+            description: `An interactive annual report, including scroll, statistic and page 
+            animations, in collaboration with designers and internal stakeholders to showcase 
+            Wellways' 2019-2020 financial year.`,
             img_url: wellways,
             link: 'https://github.com/kailana-so/WW-AnnualReport2020',
             showWindow: false
@@ -125,7 +127,7 @@ export function PageProvider(props) {
         }
     }
 
-    const extractLanguage  = repository => repository.language
+    const extractLanguage  = repository => [repository.name, repository.language]
     const username = 'kailana-so'
     
     useEffect(() => {
@@ -135,11 +137,15 @@ export function PageProvider(props) {
         .then(repos => repos.map(repo => extractLanguage(repo)).filter(repoLang => repoLang != null)) 
         .then(languages => setLang([{ id: 0, title: 'github languages', img_url: gitpic, link: 'https://github.com/kailana-so', showWindow: false, description: languages}]))
     },[])
-    // console.log(lang)
-    // // console.log(bio)
+    console.log(lang)
+
+    const openInNewTab = (url) => {
+        const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+        if (newWindow) newWindow.opener = null
+      }
 
     return (
-        <PageContext.Provider value={ { data, bio, lang, handleClose, handleOpen } }>
+        <PageContext.Provider value={ { data, bio, lang, handleClose, handleOpen, openInNewTab } }>
             { props.children }
         </PageContext.Provider>
     )

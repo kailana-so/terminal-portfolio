@@ -37,6 +37,12 @@ export default function MainTerminal() {
                 <p>
                     <b>&#62; 'open lang'</b> to see languages on github
                 </p>
+                <p>
+                    <b>&#62;</b> drag windows to arrange
+                </p>
+                <p>
+                    <b>&#62;</b> click the red button to close
+                </p>
             </Typist>
         </section>
     )

@@ -1,10 +1,13 @@
 .main-page {
-    height: 600px;
     width: 100vw;
+    position: relative;
+    min-height: 100vh;
+    
 }
 
 .terminals-section {
     display: flex;
+    flex-direction: row;
     margin: -62% 0 0 0%;
     align-items: flex-end;
     flex-wrap: wrap;
@@ -30,10 +33,22 @@ transition: opacity 600ms ease-in;
 
 @media only screen and (min-width: 768px) {
 
-.terminals-section {
-    display: flex;
-    margin: -45% 0 0 0%;
-    align-items: flex-end;
-    flex-wrap: wrap;
+    .terminals-section {
+        margin: -35% 0 0 0%;
+    }
 }
+
+@media only screen and (min-width: 992px) {
+    
+    .terminals-section {
+        margin: -25% 0 0 0%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    
+    .terminals-section {
+        margin: -5% 0 0 0%;
+    }
+
 }

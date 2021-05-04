@@ -9,8 +9,12 @@ export default function SecondaryTerminals(props) {
     const description = props.data.description
     const image = props.data.img_url
     const link = props.data.link
+    const platform = link.split('/')
+    // console.log(platform[2])
 
     const { handleClose } = useContext(PageContext)
+
+    const { openInNewTab } = useContext(PageContext)
 
     return (
         <Draggable>
@@ -22,16 +26,20 @@ export default function SecondaryTerminals(props) {
                         <div className="terminal-btn green"></div>
                     </div>
                     <section className="terminal-text">
-                    <p className="terminal-path">~/documents/{title}</p>
+                    <p className="terminal-path">~/docs/{title.split(' ').join('-')}</p>
                         <img src={image} alt={title}/>
                             <h1> 
                                 {title}
                             </h1>
                             <div className="container">
-                                {description}
+                                <p>
+                                    {description}
+                                </p>
                             </div>
-                            <p>
-                                <a href={link}> <b className="blue">view online</b> </a>
+                            <p onClick={() => openInNewTab(link)}>
+                                <b><u> 
+                                    {platform[2]} 
+                                </u></b>
                             </p>
                     </section>
                 </div>

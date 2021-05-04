@@ -25,14 +25,18 @@ export default function GitTerminal(props) {
                         <div className="terminal-btn green"></div>
                     </div>
                     <section className="terminal-text">
-                    <p className="terminal-path">~/api/{title}</p>
+                    <p className="terminal-path">~/api/{title.split(' ').join('-')}</p>
                         <img src={image} alt={title}/>
                             <h1> 
-                                {title}
+                                Projects by language
                             </h1>
                             <div className="container">
                                 {description.map(language => {
-                                        return <li>{language}</li>
+                                        if (language[1] === null) {
+                                            return
+                                        } else {
+                                            return <p><b>{language[0]}:</b> {language[1]}</p>
+                                        }
                                     }
                                 )}
                             </div>
