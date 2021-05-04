@@ -7,6 +7,9 @@ body {
   background-size: contain;
 }
 
+h1 {
+  font-size: large;
+}
 section {
   margin-top: 2.5%;
 }

@@ -14,13 +14,18 @@
 }
 
 .secondary-terminals {
-    /* float: right; */
     text-align: left;
-    margin: -5% -45% -55% 0;
-    /* padding: 0 5%; */
+    margin: 0.5% 0 -60% 40%;
+    padding: 0 5%;
     width: 45%;
     font-size: small;
-    /* height: 250px;*/
+}
+.git-terminal {
+    text-align: left;
+    margin: 10% 0 -60% 40%;
+    padding: 0 5%;
+    width: 45%;
+    font-size: small;
 }
 
 .Typist .Cursor--blinking {
@@ -87,6 +92,20 @@
     width: 100%;
 }
 
-.hidden {
-    display: none;
+@media only screen and (min-width: 768px) {
+
+    .secondary-terminals {
+        text-align: left;
+        margin: 15% 0 -60% 40%;
+        padding: 0 5%;
+        width: 45%;
+        font-size: small;
+    }
+    .git-terminal {
+        text-align: left;
+        margin: 15% 0 -60% 40%;
+        padding: 0 5%;
+        width: 45%;
+        font-size: small;
+    }
 }

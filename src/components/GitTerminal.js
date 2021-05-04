@@ -3,10 +3,13 @@ import Draggable from 'react-draggable'
 import { useContext } from 'react'
 import { PageContext } from './PageContext'
  
-export default function SecondaryTerminals(props) {
+export default function GitTerminal(props) {
 
     const title = props.data.title
     const description = props.data.description
+
+    console.log(description)
+
     const image = props.data.img_url
     const link = props.data.link
 
@@ -14,7 +17,7 @@ export default function SecondaryTerminals(props) {
 
     return (
         <Draggable>
-            <section className="secondary-terminals">
+            <section className="git-terminal">
                 <div className="terminal-window">
                     <div className="terminal-bar">
                         <div className="terminal-btn red" onClick={() => handleClose(props)}></div>
@@ -22,13 +25,16 @@ export default function SecondaryTerminals(props) {
                         <div className="terminal-btn green"></div>
                     </div>
                     <section className="terminal-text">
-                    <p className="terminal-path">~/documents/{title}</p>
+                    <p className="terminal-path">~/api/{title}</p>
                         <img src={image} alt={title}/>
                             <h1> 
                                 {title}
                             </h1>
                             <div className="container">
-                                {description}
+                                {description.map(language => {
+                                        return <li>{language}</li>
+                                    }
+                                )}
                             </div>
                             <p>
                                 <a href={link}> <b className="blue">view online</b> </a>

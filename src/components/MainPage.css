@@ -1,14 +1,39 @@
 .main-page {
     height: 600px;
-    /* margin: 0 0 10% 0; */
-    /* padding: 0 0 10% 0; */
+    width: 100vw;
 }
 
 .terminals-section {
     display: flex;
-    flex-direction: column;
+    margin: -62% 0 0 0%;
+    align-items: flex-end;
     flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-between;
+}
 
+.window-transition-enter {
+    opacity: 0.01;
+}
+
+.window-transition-enter.window-transition-enter-active {
+opacity: 1;
+transition: opacity 500ms ease-in;
+}
+
+.window-transition-leave {
+opacity: 1;
+}
+
+.window-transition-leave.window-transition-leave-active {
+opacity: 0.01;
+transition: opacity 600ms ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+
+.terminals-section {
+    display: flex;
+    margin: -45% 0 0 0%;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
 }

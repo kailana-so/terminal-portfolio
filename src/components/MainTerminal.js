@@ -29,16 +29,13 @@ export default function MainTerminal() {
             <Typist> 
                 <Typist.Delay ms={500} />
                 <p>
-                    &#62; Type 'open about' to read my bio  
+                    <b>&#62; 'open about'</b> to read my bio  
                 </p>
                 <p>
-                    &#62; Type 'open projects' to see some projects
+                    <b>&#62; 'open projects'</b> to see some projects
                 </p>
                 <p>
-                    &#62; Type 'open lang' to see my languages on github
-                </p>
-                <p>
-                    <sub> [drag windows]</sub>
+                    <b>&#62; 'open lang'</b> to see languages on github
                 </p>
             </Typist>
         </section>
@@ -58,14 +55,14 @@ export default function MainTerminal() {
 
                         <section className="container">
                             <Typist>
-                                <p> Hi there.</p>
+                                <p><b>&#62;</b> Hi there.</p>
                                 <Typist.Delay ms={900} />
-                                    <p> I'm Kailana.</p>
+                                    <p><b>&#62;</b> I'm Kailana.</p>
                                     <Typist.Delay ms={900} />
-                                    <p> This is a website. <Typist.Backspace count={12} delay={200} /> my website.</p>
+                                    <p><b>&#62;</b> This is a website. <Typist.Backspace count={12} delay={200} /> my website.</p>
                                     <Typist.Delay ms={900} />
                                     {/* <p> You are the user.</p> */}
-                                    <p> For commands type 'HELP' </p> 
+                                    <p><b>&#62;</b> For commands type <b>'help'</b> </p> 
                             </Typist>
 
                             {value.includes('help') ? menu : ''}
