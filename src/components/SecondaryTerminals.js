@@ -4,7 +4,8 @@ import { useContext } from 'react'
 import { PageContext } from './PageContext'
  
 export default function SecondaryTerminals(props) {
-
+    console.log(props)
+    
     const title = props.data.title
     const description = props.data.description
     const image = props.data.img_url

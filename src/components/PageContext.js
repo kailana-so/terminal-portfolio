@@ -6,14 +6,26 @@ import flowers from '../images/flowers.png'
 import wellways from '../images/wellways.png'
 import tictac from '../images/tictac.png'
 import port from '../images/pic.jpg'
-import gitpic from '../images/github.png'
+import fork from '../images/fork.png'
 import axios from 'axios'
 import { useEffect } from 'react'
 
 export const PageContext = createContext()
 
 export function PageProvider(props) {
-
+    
+    
+    const extractData  = repository => [repository.name, repository.language, repository.html_url, repository.pushed_at]
+    const username = 'kailana-so'
+    
+    useEffect(() => {
+        axios
+        .get(`https://api.github.com/users/${username}/repos`)
+        .then(({ data }) => data)
+        .then(repos => repos.map(repo => extractData(repo)).filter(repoData => repoData != null)) 
+        .then(repositoryData => setLang([{ id: 0, img_url: fork, showWindow: false, description: repositoryData}]))
+    },[])
+    
     const [ data, setData ] = useState([
         {   
             id: 0,
@@ -102,50 +114,44 @@ export function PageProvider(props) {
     }
 
     const handleOpen = (props) => {
-        // console.log(props)
-
-        if (props === 'open about') {
+        if (props.includes('open about')) {
             console.log('yep! time to open about')
             setBio(bio.map(obj => {
                 return {...obj, showWindow: true}
             }))
             // console.log(bio)
 
-        } else if (props === 'open projects') {
+        }
+        
+        if (props.includes('open projects')) {
             console.log('yep! time to open projects')
             setData(data.map(obj => {
                 return {...obj, showWindow: true}
             }))
             // console.log(data)
 
-        } else if (props === 'open lang') {
-            console.log('yep! time to open lang')
-            setLang(lang.map(obj => {
-                return {...obj, showWindow: true}
-            }))
-            // console.log(lang)
         }
-    }
 
-    const extractLanguage  = repository => [repository.name, repository.language]
-    const username = 'kailana-so'
-    
-    useEffect(() => {
-        axios
-        .get(`https://api.github.com/users/${username}/repos`)
-        .then(({ data }) => data)
-        .then(repos => repos.map(repo => extractLanguage(repo)).filter(repoLang => repoLang != null)) 
-        .then(languages => setLang([{ id: 0, title: 'github languages', img_url: gitpic, link: 'https://github.com/kailana-so', showWindow: false, description: languages}]))
-    },[])
-    console.log(lang)
+    }
 
     const openInNewTab = (url) => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
-      }
+    }
 
+    const openGit = () => {
+        console.log('desktop baby')
+
+        if (lang !== 0) {
+            console.log('open git window')
+            setLang(lang.map(obj => {
+                return {...obj, showWindow: true}
+            }))
+        } 
+    }
+    // console.log(lang)
     return (
-        <PageContext.Provider value={ { data, bio, lang, handleClose, handleOpen, openInNewTab } }>
+        <PageContext.Provider value={ { data, bio, lang, handleClose, handleOpen, openInNewTab, openGit } }>
             { props.children }
         </PageContext.Provider>
     )

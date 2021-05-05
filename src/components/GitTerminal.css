@@ -1,0 +1,105 @@
+.git-terminal {
+    text-align: left;
+    margin: 35% 0 0 10%;
+    padding: 0 5%;
+    width: 65%;
+    font-size: small;
+    position: absolute;
+}
+
+.git-container {
+    /* height: 100px; */
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.git-window{
+    padding: 0 0 5% 0;
+    background-color: rgb(242, 242, 242);
+    border-radius: 15px;
+    box-shadow: -7px 5px 19px -6px rgba(80,80,80,0.75);
+                -webkit-box-shadow: -7px 5px 19px -6px rgba(80,80,80,0.75);
+                -moz-box-shadow: -7px 5px 19px -6px rgba(80,80,80,0.75);
+    cursor: grab;           
+}
+
+.git-bar{
+    padding: 2%;
+    background-color: #24292e;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.git-btn{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    padding: 1.5%;
+    margin: 0 2%;
+    border: 1px solid slategray;
+}
+
+.git-text {
+    padding: 0 5%;
+}
+.git-date {
+    color: slategray;
+    display:flex;
+    align-items: center;
+}
+.git-entries {
+    padding: 1% 0 ;
+}
+
+.git-text span {
+    padding: 1%;
+}
+
+.git-container div img {
+    width: 15px;
+    height: 15px;
+    padding: 1% 0 0 0;
+    margin: 0;
+}
+.git-head {
+    color:snow;
+    padding: 2.5% 5%;
+    background-color: rgb(96, 96, 96);
+}
+
+.git-text img {
+    width: 50%;
+    height: 100%;
+    border-radius: 100px;
+}
+.git-tab-bg {
+    background-color:rgb(250, 249, 249);
+    border-bottom: 1px solid gray;
+}
+
+
+.git-tab {
+    padding: 0 5%;
+    border-top: 1.5px solid gray;
+    border-right: 1.5px solid gray;
+    border-bottom: 4px solid rgb(95, 156, 210);
+    /* border-top-right-radius: 15px; */
+    width: 25%;
+    /* background-color:snow; */
+}
+
+@media only screen and (min-width: 768px) {
+    .git-btn{
+        height: 0.5px;
+        width: 0.5px;
+        padding: 1%;
+    }
+    .git-bar{
+        padding: 1%;
+    }
+
+    .git-terminal {
+        margin: -10% 0 0 10%;
+    }
+}

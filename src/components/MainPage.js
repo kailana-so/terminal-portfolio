@@ -10,12 +10,22 @@ import Footer from './Footer.js'
 export default function MainPage(){
 
     const { data, bio, lang } = useContext(PageContext)
+    // console.log(lang.length)
+    // console.log(lang)
+    //     if(lang.length > 0) {
+    //         console.log('data')
+    //     } else {
+    //         console.log(' no data')
+    //     }
+    // // }
+
+    const gitWindow = lang.length > 0 ? lang[0] : []
+
+    console.log(gitWindow.showWindow)
+
 
     return (
         <section className="main-page">
-
-
-            {/* grab the user input form the main termianl component and create a new array? then map through that array */}
             <MainTerminal />
 
             <section className="terminals-section">
@@ -29,14 +39,16 @@ export default function MainPage(){
 
                         {bio[0].showWindow === true 
                             ? <SecondaryTerminals key={bio[0].id} id={bio[0].id} data={bio[0]} visible={bio[0].showWindow}/> 
-                            : null}
-
-                        {lang[0] === undefined 
-                            ? null 
-                            : lang[0].showWindow === true 
-                                ? <GitTerminal key={lang[0].id} id={lang[0].id} data={lang[0]} visible={lang[0].showWindow}/> 
-                                : null}
-                        
+                            : null
+                            }
+                </CSSTransitionGroup>
+                <CSSTransitionGroup
+                    transitionName="window-transition"
+                    transitionEnterTimeout={900}
+                    transitionLeaveTimeout={300}>
+                            {gitWindow.showWindow === true 
+                                ? <GitTerminal key={gitWindow.id} id={gitWindow.id} data={gitWindow} visible={gitWindow.showWindow}/> 
+                                : null} 
                 </CSSTransitionGroup>
             </section>
             <Footer />

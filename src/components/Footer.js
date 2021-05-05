@@ -2,6 +2,7 @@ import './Footer.css'
 import giticon from '../images/GitHub-Mark-120px-plus.png'
 import codepenicon from '../images/codepen.png'
 import linkedinicon from '../images/LI-In-Bug.png'
+import folder from '../images/folder.png'
 import { PageContext } from './PageContext.js'
 import { useContext } from 'react'
 
@@ -9,9 +10,13 @@ export default function Footer() {
 
     const { openInNewTab } = useContext(PageContext)
 
+    const { openGit } = useContext(PageContext)
+
     return (
         <footer>
             <div className="footer-dock">
+
+                <img className="work-icons" src={folder} alt="github icon" onClick={() => openGit()} />
 
                 <img className="work-icons" src={giticon} alt="github icon" onClick={() => openInNewTab('https://github.com/kailana-so')} />
 

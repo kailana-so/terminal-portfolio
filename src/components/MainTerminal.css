@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
 .terminal-path{
     font-size: small;
     margin-left: -2%;
@@ -9,7 +8,7 @@
     text-align: left;
     margin: -25% 0;
     padding: 0 5%;
-    width: 45%;
+    width: 50%;
     font-size: small;  
 }
 
@@ -19,13 +18,6 @@
     padding: 0 5%;
     font-size: small;
     position: absolute;
-}
-.git-terminal {
-    text-align: left;
-    margin: -10% 0 -60% 40%;
-    padding: 0 5%;
-    width: 45%;
-    font-size: small;
 }
 
 .Typist .Cursor--blinking {
@@ -89,7 +81,7 @@
 }
 
 .terminal-text img {
-    width: 100%;
+    width: 50%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -98,20 +90,6 @@
         font-family: 'VT323', monospace;
         font-size: larger;
         margin-left: -2%;
-    }
-    .secondary-terminals {
-        text-align: left;
-        margin: 10% 0 0 40%;
-        padding: 0 5%;
-        /* width: 45%; */
-        font-size: small;
-    }
-    .git-terminal {
-        text-align: left;
-        margin: -5% 0 -60% 40%;
-        padding: 0 5%;
-        /* width: 45%; */
-        font-size: small;
     }
     .terminal-btn{
         height: 0.5px;

@@ -1,48 +1,65 @@
 import './MainTerminal.css'
+import './GitTerminal.css'
 import Draggable from 'react-draggable'
 import { useContext } from 'react'
 import { PageContext } from './PageContext'
+import moment from 'moment'
+
  
 export default function GitTerminal(props) {
+    console.log(props)
 
     const title = props.data.title
-    const description = props.data.description
+    const img = props.data.img_url
+    const description = props.data.description // name, language, link
 
-    console.log(description)
+    console.log(title)
 
-    const image = props.data.img_url
-    const link = props.data.link
 
-    const { handleClose } = useContext(PageContext)
+    const { handleClose, openInNewTab} = useContext(PageContext)
 
     return (
         <Draggable>
             <section className="git-terminal">
-                <div className="terminal-window">
-                    <div className="terminal-bar">
-                        <div className="terminal-btn red" onClick={() => handleClose(props)}></div>
-                        <div className="terminal-btn yellow"></div>
-                        <div className="terminal-btn green"></div>
+                <div className="git-window">
+                    <div className="git-bar">
+                        <div className="git-btn red" onClick={() => handleClose(props)}></div>
+                        <div className="git-btn yellow"></div>
+                        <div className="git-btn green"></div>
                     </div>
-                    <section className="terminal-text">
-                    <p className="terminal-path">~/api/{title.split(' ').join('-')}</p>
-                        <img src={image} alt={title}/>
-                            <h1> 
-                                Projects by language
-                            </h1>
-                            <div className="container">
-                                {description.map(language => {
-                                        if (language[1] === null) {
-                                            return
-                                        } else {
-                                            return <p><b>{language[0]}:</b> {language[1]}</p>
-                                        }
+                    <div className="git-head">
+                        <p> 
+                            Current Repository <br/>
+
+                            <b> Desktop </b>
+                        </p>
+                    </div>
+                    <div className="git-tab-bg">
+                        <div className="git-tab">
+                            <p> History </p>
+                        </div>
+                    </div>
+                    <section className="git-text">
+                        <div className="git-container">
+                            {description.map(item => {
+                                    if (item[1] === null) {
+                                        return null
+                                    } else {
+                                        return (
+                                            <div className="git-entries" onClick={() => openInNewTab(item[2])}>
+                                                <b>{item[0]}:</b> 
+                                                    &#160;{item[1]} 
+                                                <br></br>
+                                                <small className="git-date">
+                                                    <img src={img} alt={title}/> &#160;
+                                                    {moment(item[3]).format("MMM Do YYYY")}
+                                                </small>
+                                            </div>
+                                        )
                                     }
-                                )}
-                            </div>
-                            <p>
-                                <a href={link}> <b className="blue">view online</b> </a>
-                            </p>
+                                }
+                            )}
+                        </div>
                     </section>
                 </div>
             </section>

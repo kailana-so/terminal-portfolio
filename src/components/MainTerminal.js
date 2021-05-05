@@ -18,12 +18,19 @@ export default function MainTerminal() {
 
     const handleInput = (e) => {
         e.preventDefault()
-        let userInput =  e.target.value.toLowerCase()
+        const userInput =  e.target.value.toLowerCase()
+
+        if(userInput === 'open about') {
+            console.log('about')
+        } 
+        if(userInput === 'open lang') {
+            console.log('lang')
+        } 
         setValue(value => [...value, userInput])  
         handleOpen(userInput)
     }
     
-    const menu = (
+    const helpMenu = (
         <section>
             <p className="terminal-path">~/menu</p>
             <Typist> 
@@ -35,13 +42,13 @@ export default function MainTerminal() {
                     <b>&#62; 'open projects'</b> to see some projects
                 </p>
                 <p>
-                    <b>&#62; 'open lang'</b> to see languages on github
+                    <b>&#62;</b> drag windows to move
                 </p>
                 <p>
-                    <b>&#62;</b> drag windows to arrange
+                    <b>&#62;</b> click the red button to close window
                 </p>
                 <p>
-                    <b>&#62;</b> click the red button to close
+                    <b>&#62;</b> open folder to see github languages
                 </p>
             </Typist>
         </section>
@@ -71,11 +78,11 @@ export default function MainTerminal() {
                                     <p><b>&#62;</b> For commands type <b>'help'</b> </p> 
                             </Typist>
 
-                            {value.includes('help') ? menu : ''}
+                            {value.includes('help') ? helpMenu : ''}
 
                             <form>
                                 <b className="user"> &#62; &#62; </b> 
-                                <input autofocus="" className="user-input" type="text" onChange={handleInput} cols="35" rows="5" placeholder="..." /> 
+                                <input autoFocus="" className="user-input" type="text" onChange={handleInput} cols="35" rows="5" placeholder="..." /> 
                             </form>
                         </section>
                     </section>
