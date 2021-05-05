@@ -5,7 +5,8 @@
 }
 
 .header img {
-    width: 35%;
+    /* width: 35%; */
+    height: 5%;
     margin: 0 1.5%;
     padding: 0;
     transform: rotate(15deg);

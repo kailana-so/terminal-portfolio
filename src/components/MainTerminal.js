@@ -1,7 +1,6 @@
 import Typist from 'react-typist'
 import moment from 'moment'
 import './MainTerminal.css'
-import Draggable from 'react-draggable'
 import { useContext, useState } from 'react'
 import { PageContext } from './PageContext'
  
@@ -42,20 +41,16 @@ export default function MainTerminal() {
                     <b>&#62; 'open projects'</b> to see some projects
                 </p>
                 <p>
-                    <b>&#62;</b> drag windows to move
+                    <b>&#62;</b> click the folder to see github languages
                 </p>
                 <p>
-                    <b>&#62;</b> click the red button to close window
-                </p>
-                <p>
-                    <b>&#62;</b> open folder to see github languages
+                    <b>&#62;</b> drag to move // red button to close
                 </p>
             </Typist>
         </section>
     )
     
     return (
-        <Draggable>
             <section className="main-terminal">
                 <div className="terminal-window">
                     <div className="terminal-bar">
@@ -74,7 +69,6 @@ export default function MainTerminal() {
                                     <Typist.Delay ms={900} />
                                     <p><b>&#62;</b> This is a website. <Typist.Backspace count={12} delay={200} /> my website.</p>
                                     <Typist.Delay ms={900} />
-                                    {/* <p> You are the user.</p> */}
                                     <p><b>&#62;</b> For commands type <b>'help'</b> </p> 
                             </Typist>
 
@@ -82,13 +76,12 @@ export default function MainTerminal() {
 
                             <form>
                                 <b className="user"> &#62; &#62; </b> 
-                                <input autoFocus="" className="user-input" type="text" onChange={handleInput} cols="35" rows="5" placeholder="..." /> 
+                                <input autoFocus="" className="user-input" type="text" onChange={handleInput} cols="45" rows="10" placeholder="..........." /> 
                             </form>
                         </section>
                     </section>
                 </div>
             </section>
-        </Draggable>
     )
 
 }

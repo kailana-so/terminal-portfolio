@@ -22,10 +22,11 @@ export default function SecondaryTerminals(props) {
             <section className="secondary-terminals">
                 <div className="terminal-window">
                     <div className="terminal-bar">
-                        <div className="terminal-btn red" onClick={() => handleClose(props)}></div>
+                        <div className="terminal-btn red" onClick={() => handleClose(props)} onMouseDown={(e) => {e.stopPropagation()}}></div>
                         <div className="terminal-btn yellow"></div>
                         <div className="terminal-btn green"></div>
                     </div>
+                    
                     <section className="terminal-text">
                     <p className="terminal-path">~/docs/{title.split(' ').join('-')}</p>
                         <img src={image} alt={title}/>

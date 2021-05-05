@@ -1,6 +1,6 @@
 .main-page {
     width: 100vw;
-    position: relative;
+    position: absolute;
     min-height: 100vh;
     
 }

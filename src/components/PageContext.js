@@ -85,7 +85,7 @@ export function PageProvider(props) {
             title: 'Kailana Sommer',
             description: `I'm a junior front-end developer passionate about creating and maintaining intelligent (and fun!), responsive and accessible design systems for everyone. With a history in video production and digital strategy, I love creating performant visual narratives which enhance the user experience and tell key branding stories. I love working alongside developers and designers, interpreting briefs, UI / UX wireframes and working closely with colleagues to translate ideas into code.`,
             img_url: port,
-            link: 'www.linkedin.com/in/kailana-so',
+            link: 'https://linkedin.com/in/kailana-so',
             showWindow: false
         }
     ])

@@ -10,19 +10,8 @@ import Footer from './Footer.js'
 export default function MainPage(){
 
     const { data, bio, lang } = useContext(PageContext)
-    // console.log(lang.length)
-    // console.log(lang)
-    //     if(lang.length > 0) {
-    //         console.log('data')
-    //     } else {
-    //         console.log(' no data')
-    //     }
-    // // }
 
     const gitWindow = lang.length > 0 ? lang[0] : []
-
-    console.log(gitWindow.showWindow)
-
 
     return (
         <section className="main-page">

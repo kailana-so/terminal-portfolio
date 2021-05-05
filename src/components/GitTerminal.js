@@ -10,7 +10,6 @@ export default function GitTerminal(props) {
     console.log(props)
 
     const title = props.data.title
-    const img = props.data.img_url
     const description = props.data.description // name, language, link
 
     console.log(title)
@@ -49,11 +48,6 @@ export default function GitTerminal(props) {
                                             <div className="git-entries" onClick={() => openInNewTab(item[2])}>
                                                 <b>{item[0]}:</b> 
                                                     &#160;{item[1]} 
-                                                <br></br>
-                                                <small className="git-date">
-                                                    <img src={img} alt={title}/> &#160;
-                                                    {moment(item[3]).format("MMM Do YYYY")}
-                                                </small>
                                             </div>
                                         )
                                     }
