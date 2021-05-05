@@ -67,16 +67,18 @@
 
 .user {
     color: blue;
-    font-size: larger;
 }
+
 .user-input {
     border: none;
     background-color: rgba(228, 242, 255, 0.529);
     color: blue;
+    font-size: larger;
 }
 
 .user-input:focus {
-    outline: 3px solid rgb(238, 238, 238);
+    outline: rgba(228, 242, 255, 0.529);
+    background-color: rgba(172, 194, 215, 0.529);
 }
 
 .terminal-text{

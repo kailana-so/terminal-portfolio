@@ -7,6 +7,7 @@ import wellways from '../images/wellways.png'
 import tictac from '../images/tictac.png'
 import port from '../images/pic.jpg'
 import fork from '../images/fork.png'
+import alien from '../images/alien.png'
 import axios from 'axios'
 import { useEffect } from 'react'
 
@@ -32,11 +33,19 @@ export function PageProvider(props) {
             title: 'CSS ATM',
             description: 'A GA css challenge.',
             img_url: bank,
-            link: 'https://codepen.io/Kailana-so/pen/GRrgKbx',
+            link: 'https://codepen.io/Kailana-so/full/GRrgKbx',
             showWindow: false
         },  
         {   
             id: 1,
+            title: 'Back to school pixel art',
+            description: 'A GA draw challenge: Draw an alien',
+            img_url: alien,
+            link: 'https://codepen.io/Kailana-so/full/GRrgKRN',
+            showWindow: false
+        },
+        {   
+            id: 2,
             title: 'Router',
             description: 'A GA navigation challenge: Find your train line.',
             img_url: router,
@@ -44,7 +53,7 @@ export function PageProvider(props) {
             showWindow: false
         },
         {   
-            id: 2,
+            id: 3,
             title: 'Tic Tac Toe',
             description: 'A GA coding challenge: Tic Tac Toe (reimagined as an 80s classic)',
             img_url: tictac,
@@ -52,7 +61,7 @@ export function PageProvider(props) {
             showWindow: false
         },
         {   
-            id: 3,
+            id: 4,
             title: 'Native plant db',
             description: 'A web app build with Ruby and Sinatra, designed to mark sightings of native east coast plants varieties.',
             img_url: flowers,
@@ -60,7 +69,7 @@ export function PageProvider(props) {
             showWindow: false
         },
         {   
-            id: 4,
+            id: 5,
             title: 'Interactive Annual Report',
             description: `An interactive annual report, including scroll, statistic and page 
             animations, in collaboration with designers and internal stakeholders to showcase 
@@ -70,7 +79,7 @@ export function PageProvider(props) {
             showWindow: false
         },
         {   
-            id: 5,
+            id: 6,
             title: 'GenusGenius',
             description: 'GenusGenius is a web app design to assist with the identification of different plant species. This single-page app currently has three methods for exploring plants in your area: Image identification API; Intelligent searching via keyword extraction; and a Google map lookup with markers.',
             img_url: genus,
@@ -83,7 +92,7 @@ export function PageProvider(props) {
         {   
             id: 0,
             title: 'Kailana Sommer',
-            description: `I'm a junior front-end developer passionate about creating and maintaining intelligent (and fun!), responsive and accessible design systems for everyone. With a history in video production and digital strategy, I love creating performant visual narratives which enhance the user experience and tell key branding stories. I love working alongside developers and designers, interpreting briefs, UI / UX wireframes and working closely with colleagues to translate ideas into code.`,
+            description: `Hi again. I'm a junior full-stack developer inspired by intelligent, responsive and accessible design systems for everyone. With a history in video editing and digital strategy, I like telling visual narratives to enhance user experience and tell key branding stories. I love working alongside developers and designers, interpreting briefs, wireframes and working closely with colleagues to translate ideas into code.`,
             img_url: port,
             link: 'https://linkedin.com/in/kailana-so',
             showWindow: false

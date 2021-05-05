@@ -11,8 +11,8 @@ export default function GitTerminal(props) {
 
     const title = props.data.title
     const description = props.data.description // name, language, link
-
-    console.log(title)
+    const fork = props.data.img_url
+    console.log(props.data.img_url)
 
 
     const { handleClose, openInNewTab} = useContext(PageContext)
@@ -46,8 +46,13 @@ export default function GitTerminal(props) {
                                     } else {
                                         return (
                                             <div className="git-entries" onClick={() => openInNewTab(item[2])}>
-                                                <b>{item[0]}:</b> 
+                                                <img src={fork} alt={item[0]}></img>
+                                                <b>
+                                                    {item[0]}:
+                                                </b> 
                                                     &#160;{item[1]} 
+                                                    &#160;
+                                                    {moment(item[3]).format("dd, MM Do YYYY, h:mm:ss a")} 
                                             </div>
                                         )
                                     }

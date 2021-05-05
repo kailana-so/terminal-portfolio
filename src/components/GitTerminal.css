@@ -51,6 +51,7 @@
 }
 .git-entries {
     padding: 1% 0 ;
+    border-bottom: 1px solid slategray;
 }
 
 .git-entries:hover {
@@ -62,9 +63,9 @@
 } */
 
 .git-container div img {
-    width: 15px;
-    height: 15px;
-    padding: 1% 0 0 0;
+    width: 25px;
+    height: 25px;
+    padding: 1% 2% 0 0;
     margin: 0;
 }
 .git-head {
@@ -105,6 +106,6 @@
     }
 
     .git-terminal {
-        margin: 1% 0 0 10%;
+        margin: -15% 0 0 10%;
     }
 }

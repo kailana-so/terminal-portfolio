@@ -4,18 +4,17 @@ import { useContext } from 'react'
 import { PageContext } from './PageContext'
  
 export default function SecondaryTerminals(props) {
-    console.log(props)
+    // console.log(props)
     
     const title = props.data.title
     const description = props.data.description
     const image = props.data.img_url
     const link = props.data.link
     const platform = link.split('/')
-    // console.log(platform[2])
 
-    const { handleClose } = useContext(PageContext)
+    const { handleClose, openInNewTab } = useContext(PageContext)
 
-    const { openInNewTab } = useContext(PageContext)
+    // const { openInNewTab } = useContext(PageContext)
 
     return (
         <Draggable>
