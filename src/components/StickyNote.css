@@ -1,0 +1,81 @@
+.sticky-note-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: -7% 15% 5% 0;
+}
+
+.sticky-note {
+    /* background-color: rgb(244, 209, 95); */
+    width: 25%;
+    height: 35%;
+    padding:  0 0 2% 0;
+    text-align: left;
+    box-shadow: 10px 5px 19px -6px rgba(80,80,80,0.75);
+                -webkit-box-shadow: 10px 5px 19px -6px rgba(80,80,80,0.75);
+                -moz-box-shadow: 10px 5px 19px -6px rgba(80,80,80,0.75);
+    background: rgb(252,246,221);
+    background: linear-gradient(180deg,rgb(255, 229, 142) 0%, rgb(255, 235, 169) 100%);
+    -webkit-transform: rotate(2.5deg);
+	-moz-transform: rotate(2.5deg);
+	-ms-transform: rotate(2.5deg);
+	-o-transform: rotate(2.5deg);
+	transform: rotate(2.5deg);
+    
+}
+
+.sticky-note-top {
+    height: 40px;
+    width: 100%;
+    background: rgb(252,246,221);
+    background: linear-gradient(180deg, rgb(255, 233, 159) 0%, rgb(247, 224, 138) 100%);
+}
+
+.sticky-note  p {
+    padding:  0 10%;
+}
+.pin {
+    background-color: #aaa;
+    display: block;
+    height: 22px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    z-index: 1;
+}
+
+.pin:after {
+    background-color: rgb(87, 126, 174);
+    background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+    border-radius: 50%;
+    content: '';
+    height: 12px;
+    left: -5px;
+    position: absolute;
+    top: -1px;
+    width: 12px;
+  }
+  
+.pin:before {
+    background-color: rgba(38, 38, 38, 0.1);
+    box-shadow: 0 0 .25em rgba(34, 34, 34, 0.1);
+    content: '';
+    height: 14px;
+    width: 2px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    /*   
+    transform: rotate(57.5deg);
+    -moz-transform: rotate(57.5deg);
+    -webkit-transform: rotate(57.5deg);
+    -o-transform: rotate(57.5deg);
+    -ms-transform: rotate(57.5deg); */
+   
+    /* transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%; */
+}
+  

@@ -71,7 +71,7 @@
 
 .user-input {
     border: none;
-    background-color: rgba(228, 242, 255, 0.529);
+    background-color: rgb(242, 242, 242);
     color: blue;
     font-size: larger;
 }
