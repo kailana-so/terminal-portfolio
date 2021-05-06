@@ -73,12 +73,12 @@
     border: none;
     background-color: rgb(242, 242, 242);
     color: blue;
-    font-size: larger;
+    font-size: 20px;
 }
 
 .user-input:focus {
     outline: rgba(228, 242, 255, 0.529);
-    background-color: rgba(172, 194, 215, 0.529);
+    background-color: rgba(222, 222, 222, 0.529);
 }
 
 .terminal-text{

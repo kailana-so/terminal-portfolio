@@ -69,7 +69,7 @@ export default function MainTerminal() {
                                     <Typist.Delay ms={900} />
                                     <p><b>&#62;</b> This is a website. <Typist.Backspace count={12} delay={200} /> my website.</p>
                                     <Typist.Delay ms={900} />
-                                    <p><b>&#62;</b> Have a look around! </p> 
+                                    <p><b>&#62;</b> Open some files.</p> 
                             </Typist>
 
                             {/* {value.includes('help') ? helpMenu : ''} */}

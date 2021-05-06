@@ -51,7 +51,7 @@ export default function GitTerminal(props) {
                                                     {item[0]}:
                                                 </b> 
                                                     &#160;{item[1]} 
-                                                    &#160;
+                                                    &#160; - &#160;
                                                     {moment(item[3]).format("dd, MM Do YYYY, h:mm:ss a")} 
                                             </div>
                                         )

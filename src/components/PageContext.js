@@ -38,10 +38,10 @@ export function PageProvider(props) {
         },  
         {   
             id: 1,
-            title: 'Back to school pixel art',
-            description: 'A GA draw challenge: Draw an alien',
-            img_url: alien,
-            link: 'https://codepen.io/Kailana-so/full/GRrgKRN',
+            title: 'Tic Tac Toe',
+            description: 'A GA coding challenge: Tic Tac Toe (reimagined as an 80s classic)',
+            img_url: tictac,
+            link: 'https://github.com/kailana-so/TicTacToe',
             showWindow: false
         },
         {   
@@ -54,16 +54,16 @@ export function PageProvider(props) {
         },
         {   
             id: 3,
-            title: 'Tic Tac Toe',
-            description: 'A GA coding challenge: Tic Tac Toe (reimagined as an 80s classic)',
-            img_url: tictac,
-            link: 'https://github.com/kailana-so/TicTacToe',
+            title: 'Back to school pixel art',
+            description: 'A GA drawing challenge: Draw an alien',
+            img_url: alien,
+            link: 'https://codepen.io/Kailana-so/full/GRrgKRN',
             showWindow: false
         },
         {   
             id: 4,
             title: 'Native plant db',
-            description: 'A web app build with Ruby and Sinatra, designed to mark sightings of native east coast plants varieties.',
+            description: 'A web app built with Ruby and Sinatra, designed to create sightings of native east coast plant varieties.',
             img_url: flowers,
             link: 'https://github.com/kailana-so/native-plants-app',
             showWindow: false
@@ -92,7 +92,7 @@ export function PageProvider(props) {
         {   
             id: 0,
             title: 'Kailana Sommer',
-            description: `Hi again. I'm a junior full-stack developer inspired by intelligent, responsive and accessible design systems for everyone. With a history in video editing and digital strategy, I like telling visual narratives to enhance user experience and tell key branding stories. I love working alongside developers and designers, interpreting briefs, wireframes and working closely with colleagues to translate ideas into code.`,
+            description: `Hi again. I'm a junior full-stack developer inspired by intelligent, responsive and accessible design systems for everyone. With a history in video editing and digital strategy, I like telling visual stories and working closely with colleagues to translate ideas into code.`,
             img_url: port,
             link: 'https://linkedin.com/in/kailana-so',
             showWindow: false

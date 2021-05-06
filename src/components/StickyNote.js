@@ -15,13 +15,13 @@ export default function StickyNote() {
                     Type <b> 'open projects'</b> to see some projects
                 </p>
                 <p>
-                    Click the folder to see github repos
+                    <b>Click the folder </b>to see github repos
                 </p>
                 <p>
                     Drag to move // 🔴 to close
                 </p>
                 <p>
-                   *** better on desktop ***
+                   ** better on desktop 🙃
                 </p>
             </div>
         </article>
