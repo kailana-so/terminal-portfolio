@@ -29,26 +29,26 @@ export default function MainTerminal() {
         handleOpen(userInput)
     }
     
-    const helpMenu = (
-        <section>
-            <p className="terminal-path">~/menu</p>
-            <Typist> 
-                <Typist.Delay ms={500} />
-                <p>
-                    <b>&#62; 'open about'</b> to read my bio  
-                </p>
-                <p>
-                    <b>&#62; 'open projects'</b> to see some projects
-                </p>
-                <p>
-                    <b>&#62;</b> click the folder to see github languages
-                </p>
-                <p>
-                    <b>&#62;</b> drag to move // red button to close
-                </p>
-            </Typist>
-        </section>
-    )
+    // const helpMenu = (
+    //     <section>
+    //         <p className="terminal-path">~/menu</p>
+    //         <Typist> 
+    //             <Typist.Delay ms={500} />
+    //             <p>
+    //                 <b>&#62; 'open about'</b> to read my bio  
+    //             </p>
+    //             <p>
+    //                 <b>&#62; 'open projects'</b> to see some projects
+    //             </p>
+    //             <p>
+    //                 <b>&#62;</b> click the folder to see github languages
+    //             </p>
+    //             <p>
+    //                 <b>&#62;</b> drag to move // red button to close
+    //             </p>
+    //         </Typist>
+    //     </section>
+    // )
     
     return (
             <section className="main-terminal">
@@ -69,10 +69,10 @@ export default function MainTerminal() {
                                     <Typist.Delay ms={900} />
                                     <p><b>&#62;</b> This is a website. <Typist.Backspace count={12} delay={200} /> my website.</p>
                                     <Typist.Delay ms={900} />
-                                    <p><b>&#62;</b> For commands type <b>'help'</b> </p> 
+                                    <p><b>&#62;</b> Open some files.</p> 
                             </Typist>
 
-                            {value.includes('help') ? helpMenu : ''}
+                            {/* {value.includes('help') ? helpMenu : ''} */}
 
                             <form>
                                 <b className="user"> &#62; &#62; </b> 

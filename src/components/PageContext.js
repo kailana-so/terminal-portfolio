@@ -41,7 +41,10 @@ export function PageProvider(props) {
             id: 1,
             title: 'Tic Tac Toe',
             description: 'A GA coding challenge: Tic Tac Toe (reimagined as an 80s classic)',
+<<<<<<< HEAD
             skills: ['JavaScript', 'HTML', 'CSS', 'GitHub'],
+=======
+>>>>>>> stick-note-menu
             img_url: tictac,
             link: 'https://github.com/kailana-so/TicTacToe',
             showWindow: false
@@ -59,7 +62,10 @@ export function PageProvider(props) {
             id: 3,
             title: 'Back to school pixel art',
             description: 'A GA drawing challenge: Draw an alien',
+<<<<<<< HEAD
             skills: ['JavaScript', 'Semantic HTML', 'CSS', 'GitHub'],
+=======
+>>>>>>> stick-note-menu
             img_url: alien,
             link: 'https://codepen.io/Kailana-so/full/GRrgKRN',
             showWindow: false
@@ -68,7 +74,10 @@ export function PageProvider(props) {
             id: 4,
             title: 'Native plant db',
             description: 'A web app built with Ruby and Sinatra, designed to create sightings of native east coast plant varieties.',
+<<<<<<< HEAD
             skills: ['Ruby', 'Sinatra', 'ERB', 'Cloudinary', 'BCrypt', 'Postgres', 'Semantic HTML', 'CSS', 'GitHub'],
+=======
+>>>>>>> stick-note-menu
             img_url: flowers,
             link: 'https://github.com/kailana-so/native-plants-app',
             showWindow: false
@@ -99,8 +108,12 @@ export function PageProvider(props) {
         {   
             id: 0,
             title: 'Kailana Sommer',
+<<<<<<< HEAD
             description: `Hi again. I'm a junior full-stack developer inspired by intelligent, responsive and accessible design systems for everyone. With a history in video editing and digital strategy, I love telling visual stories and working together to translate complex ideas into code.`,
             skills: ['React', 'JavaScript', 'Express', 'Node.js', 'Ruby', 'Sinarta', 'Figma', 'Semantic HTML', 'CSS', 'Postgres', 'Cloudinary', 'GitHub', 'Adobe'],
+=======
+            description: `Hi again. I'm a junior full-stack developer inspired by intelligent, responsive and accessible design systems for everyone. With a history in video editing and digital strategy, I like telling visual stories and working closely with colleagues to translate ideas into code.`,
+>>>>>>> stick-note-menu
             img_url: port,
             link: 'https://linkedin.com/in/kailana-so',
             showWindow: false
