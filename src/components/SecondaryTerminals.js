@@ -11,6 +11,8 @@ export default function SecondaryTerminals(props) {
     const image = props.data.img_url
     const link = props.data.link
     const platform = link.split('/')
+    const skills = props.data.skills
+    console.log(skills)
 
     const { handleClose, openInNewTab } = useContext(PageContext)
 
@@ -35,6 +37,9 @@ export default function SecondaryTerminals(props) {
                             <div className="container">
                                 <p>
                                     {description}
+                                </p>
+                                <p>
+                                    <b>{title === 'Kailana Sommer' ? 'Skills: ' : 'Tech: '}</b>{skills.join(', ')}
                                 </p>
                             </div>
                             <p onClick={() => openInNewTab(link)}>

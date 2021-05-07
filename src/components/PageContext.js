@@ -32,38 +32,43 @@ export function PageProvider(props) {
             id: 0,
             title: 'CSS ATM',
             description: 'A GA css challenge.',
+            skills: ['Semantic HTML', 'CSS', 'JavaScript', 'GitHub'],
             img_url: bank,
             link: 'https://codepen.io/Kailana-so/full/GRrgKbx',
             showWindow: false
         },  
         {   
             id: 1,
-            title: 'Back to school pixel art',
-            description: 'A GA draw challenge: Draw an alien',
-            img_url: alien,
-            link: 'https://codepen.io/Kailana-so/full/GRrgKRN',
+            title: 'Tic Tac Toe',
+            description: 'A GA coding challenge: Tic Tac Toe (reimagined as an 80s classic)',
+            skills: ['JavaScript', 'HTML', 'CSS', 'GitHub'],
+            img_url: tictac,
+            link: 'https://github.com/kailana-so/TicTacToe',
             showWindow: false
         },
         {   
             id: 2,
             title: 'Router',
             description: 'A GA navigation challenge: Find your train line.',
+            skills: ['JavaScript', 'Semantic HTML', 'CSS', 'GitHub'],
             img_url: router,
             link: 'https://codepen.io/Kailana-so/pen/LYxwjzO',
             showWindow: false
         },
         {   
             id: 3,
-            title: 'Tic Tac Toe',
-            description: 'A GA coding challenge: Tic Tac Toe (reimagined as an 80s classic)',
-            img_url: tictac,
-            link: 'https://github.com/kailana-so/TicTacToe',
+            title: 'Back to school pixel art',
+            description: 'A GA drawing challenge: Draw an alien',
+            skills: ['JavaScript', 'Semantic HTML', 'CSS', 'GitHub'],
+            img_url: alien,
+            link: 'https://codepen.io/Kailana-so/full/GRrgKRN',
             showWindow: false
         },
         {   
             id: 4,
             title: 'Native plant db',
-            description: 'A web app build with Ruby and Sinatra, designed to mark sightings of native east coast plants varieties.',
+            description: 'A web app built with Ruby and Sinatra, designed to create sightings of native east coast plant varieties.',
+            skills: ['Ruby', 'Sinatra', 'ERB', 'Cloudinary', 'BCrypt', 'Postgres', 'Semantic HTML', 'CSS', 'GitHub'],
             img_url: flowers,
             link: 'https://github.com/kailana-so/native-plants-app',
             showWindow: false
@@ -74,6 +79,7 @@ export function PageProvider(props) {
             description: `An interactive annual report, including scroll, statistic and page 
             animations, in collaboration with designers and internal stakeholders to showcase 
             Wellways' 2019-2020 financial year.`,
+            skills: ['Figma', 'Semantic HTML', 'CSS', 'SVG', 'JavaScript', 'GitHub'],
             img_url: wellways,
             link: 'https://github.com/kailana-so/WW-AnnualReport2020',
             showWindow: false
@@ -82,6 +88,7 @@ export function PageProvider(props) {
             id: 6,
             title: 'GenusGenius',
             description: 'GenusGenius is a web app design to assist with the identification of different plant species. This single-page app currently has three methods for exploring plants in your area: Image identification API; Intelligent searching via keyword extraction; and a Google map lookup with markers.',
+            skills: ['React', 'JavaScript', 'Express', 'PlantID API', 'Google maps API', 'Material UI', 'Figma', 'Semantic HTML', 'CSS', 'Postgres', 'GitHub'],
             img_url: genus,
             link: 'https://github.com/kailana-so/Plant-Finder',
             showWindow: false
@@ -92,7 +99,8 @@ export function PageProvider(props) {
         {   
             id: 0,
             title: 'Kailana Sommer',
-            description: `Hi again. I'm a junior full-stack developer inspired by intelligent, responsive and accessible design systems for everyone. With a history in video editing and digital strategy, I like telling visual narratives to enhance user experience and tell key branding stories. I love working alongside developers and designers, interpreting briefs, wireframes and working closely with colleagues to translate ideas into code.`,
+            description: `Hi again. I'm a junior full-stack developer inspired by intelligent, responsive and accessible design systems for everyone. With a history in video editing and digital strategy, I love telling visual stories and working together to translate complex ideas into code.`,
+            skills: ['React', 'JavaScript', 'Express', 'Node.js', 'Ruby', 'Sinarta', 'Figma', 'Semantic HTML', 'CSS', 'Postgres', 'Cloudinary', 'GitHub', 'Adobe'],
             img_url: port,
             link: 'https://linkedin.com/in/kailana-so',
             showWindow: false
